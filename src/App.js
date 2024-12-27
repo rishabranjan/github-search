@@ -9,14 +9,13 @@ function App() {
   const [following, setfollowing] = useState("");
   const [avatar, setavatar] = useState("");
   const [error, seterror] = useState(null);
-  const [userInput, setuserInput] = useState("");
+  const [userInput, setuserInput] = useState("rishabranjan");
   const [bio, setBio] = useState(null);
   const [location, setLocation] = useState("");
+  const [githubLink, setGithubLink] = useState("");
 
   useEffect(() => {
-    fetch("https://api.github.com/users/example")
-      .then(res => res.json())
-      .then(data => setData(data));
+    handleSubmit();
   }, []);
 
   const setData = ({
@@ -26,7 +25,8 @@ function App() {
     public_repos,
     name,
     bio,
-    location
+    location,
+    html_url,
   }) => {
     setUserName(name);
     setrepos(public_repos);
@@ -35,18 +35,18 @@ function App() {
     setavatar(avatar_url);
     setBio(bio);
     setLocation(location);
+    setGithubLink(html_url);
   };
 
-  const handleChange = e => {
-    // console.log(e.target.value);
+  const handleChange = (e) => {
     setuserInput(e.target.value);
-    // console.log(userInput);
   };
 
   const handleSubmit = () => {
     fetch(`https://api.github.com/users/${userInput}`)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
         if (data.message) seterror(data.message);
         else {
           setData(data);
@@ -64,7 +64,8 @@ function App() {
         <Form onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Input
-              onChange={e => handleChange(e)}
+              value={userInput}
+              onChange={(e) => handleChange(e)}
               placeholder="Github user"
             />
             <Button type="submit">Search</Button>
@@ -72,13 +73,17 @@ function App() {
         </Form>
       </div>
       {error ? (
-        <h1>{error}</h1>
+        <h1 className="error">{error}</h1>
       ) : (
         <div className="card">
           <Card>
             <Image src={avatar} wrapped ui={false} />
             <Card.Content>
-              <Card.Header>{userName}</Card.Header>
+              <Card.Header>
+                <a target="_blank" rel="noopener noreferrer" href={githubLink}>
+                  {userName}
+                </a>
+              </Card.Header>
               <Card.Meta>
                 <span className="date">{location}</span>
               </Card.Meta>
