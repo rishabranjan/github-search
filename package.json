@@ -7,7 +7,7 @@
     "jquery": "^3.4.1",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
-    "react-scripts": "3.1.2",
+    "react-scripts": "^3.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1"
   },
@@ -35,6 +35,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^6.2.0"
   }
 }
