@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Card, Image, Icon, Form, Button } from "semantic-ui-react";
 import "./App.css";
 import { useQuery } from "@apollo/client";
@@ -17,9 +17,21 @@ function App() {
   const [location, setLocation] = useState("");
   const [githubLink, setGithubLink] = useState("");
 
+  const handleSubmit = useCallback(() => {
+    fetch(`https://api.github.com/users/${userInput}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message) seterror(data.message);
+        else {
+          setData(data);
+          seterror(null);
+        }
+      });
+  }, [userInput]);
+
   useEffect(() => {
     handleSubmit();
-  }, []);
+  }, [handleSubmit]);
 
   const setData = ({
     avatar_url,
@@ -43,18 +55,6 @@ function App() {
 
   const handleChange = (e) => {
     setuserInput(e.target.value);
-  };
-
-  const handleSubmit = () => {
-    fetch(`https://api.github.com/users/${userInput}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.message) seterror(data.message);
-        else {
-          setData(data);
-          seterror(null);
-        }
-      });
   };
 
   return (
