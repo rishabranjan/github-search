@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/github-search/static/css/main.4ba71911.chunk.css",
-    "main.js": "/github-search/static/js/main.b40dfbe7.chunk.js",
-    "main.js.map": "/github-search/static/js/main.b40dfbe7.chunk.js.map",
-    "runtime~main.js": "/github-search/static/js/runtime~main.c607163c.js",
-    "runtime~main.js.map": "/github-search/static/js/runtime~main.c607163c.js.map",
-    "static/css/2.f36073bd.chunk.css": "/github-search/static/css/2.f36073bd.chunk.css",
-    "static/js/2.24d0f400.chunk.js": "/github-search/static/js/2.24d0f400.chunk.js",
-    "static/js/2.24d0f400.chunk.js.map": "/github-search/static/js/2.24d0f400.chunk.js.map",
+    "main.css": "/github-search/static/css/main.cc7c49f7.chunk.css",
+    "main.js": "/github-search/static/js/main.2290dc55.chunk.js",
+    "main.js.map": "/github-search/static/js/main.2290dc55.chunk.js.map",
+    "runtime-main.js": "/github-search/static/js/runtime-main.81d8266a.js",
+    "runtime-main.js.map": "/github-search/static/js/runtime-main.81d8266a.js.map",
+    "static/css/2.69b3a072.chunk.css": "/github-search/static/css/2.69b3a072.chunk.css",
+    "static/js/2.0b319ebd.chunk.js": "/github-search/static/js/2.0b319ebd.chunk.js",
+    "static/js/2.0b319ebd.chunk.js.map": "/github-search/static/js/2.0b319ebd.chunk.js.map",
     "index.html": "/github-search/index.html",
-    "precache-manifest.1d6b866e0b2942e86f14573fd88f461e.js": "/github-search/precache-manifest.1d6b866e0b2942e86f14573fd88f461e.js",
+    "precache-manifest.ba1ecf0c44a34307e27813a9ee30aa01.js": "/github-search/precache-manifest.ba1ecf0c44a34307e27813a9ee30aa01.js",
     "service-worker.js": "/github-search/service-worker.js",
-    "static/css/2.f36073bd.chunk.css.map": "/github-search/static/css/2.f36073bd.chunk.css.map",
-    "static/css/main.4ba71911.chunk.css.map": "/github-search/static/css/main.4ba71911.chunk.css.map",
+    "static/css/2.69b3a072.chunk.css.map": "/github-search/static/css/2.69b3a072.chunk.css.map",
+    "static/css/main.cc7c49f7.chunk.css.map": "/github-search/static/css/main.cc7c49f7.chunk.css.map",
+    "static/js/2.0b319ebd.chunk.js.LICENSE.txt": "/github-search/static/js/2.0b319ebd.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/github-search/static/media/outline-icons.ef60a4f6.woff"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81d8266a.js",
+    "static/css/2.69b3a072.chunk.css",
+    "static/js/2.0b319ebd.chunk.js",
+    "static/css/main.cc7c49f7.chunk.css",
+    "static/js/main.2290dc55.chunk.js"
+  ]
 }
