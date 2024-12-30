@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Card, Image, Icon, Form, Button } from "semantic-ui-react";
 import "./App.css";
+import { useQuery } from "@apollo/client";
+import { GET_LEETCODE_DATA } from "./data";
 
 function App() {
+  const { loading, error: queryError, data } = useQuery(GET_LEETCODE_DATA);
   const [userName, setUserName] = useState("");
   const [repos, setrepos] = useState("");
   const [followers, setfollowers] = useState("");
@@ -46,7 +49,6 @@ function App() {
     fetch(`https://api.github.com/users/${userInput}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.message) seterror(data.message);
         else {
           setData(data);
@@ -59,6 +61,7 @@ function App() {
     <div className="App">
       <div className="nav">
         <p className="heading">Github Search</p>
+        {!loading ? console.log(data) : console.log(queryError)}
       </div>
       <div className="form">
         <Form onSubmit={handleSubmit}>
