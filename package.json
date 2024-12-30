@@ -1,21 +1,20 @@
 {
   "name": "github-api",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "http://rishabranjan.github.io/github-search",
-  "proxy": "http://localhost:4000/",
   "dependencies": {
     "@apollo/client": "^3.12.4",
     "graphql": "^16.10.0",
     "jquery": "^3.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^3.4.4",
+    "react-scripts": "^5.0.1",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.88.1"
+    "semantic-ui-react": "^2.1.5"
   },
   "scripts": {
-    "start": "set PORT=4000 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -38,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.2.0"
   }
 }
