@@ -16,10 +16,6 @@ const client = new ApolloClient({
   headers: {
     "Content-Type": "application/json",
   },
-  //   uri: "https://leetcode.com/graphql",
-  fetchOptions: {
-    mode: "no-cors",
-  },
   cache: new InMemoryCache(),
 });
 
