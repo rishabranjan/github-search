@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Card, Image, Icon, Form, Button } from "semantic-ui-react";
 import "./App.css";
 import { useQuery } from "@apollo/client";
 import { GET_LEETCODE_DATA } from "./data";
@@ -64,53 +63,67 @@ function App() {
         {!loading ? console.log(data) : console.log(queryError)}
       </div>
       <div className="form">
-        <Form onSubmit={handleSubmit}>
-          <Form.Group>
-            <Form.Input
-              value={userInput}
-              onChange={(e) => handleChange(e)}
-              placeholder="Github user"
-            />
-            <Button type="submit">Search</Button>
-          </Form.Group>
-        </Form>
+        <form
+          className="ui form"
+          onSubmit={(event) => {
+            event.preventDefault();
+            handleSubmit();
+          }}
+        >
+          <div className="fields">
+            <div className="field">
+              <input
+                value={userInput}
+                onChange={(e) => handleChange(e)}
+                placeholder="Github user"
+              />
+            </div>
+            <div className="field">
+              <button className="ui button" type="submit">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
       {error ? (
         <h1 className="error">{error}</h1>
       ) : (
         <div className="card">
-          <Card>
-            <Image src={avatar} wrapped ui={false} />
-            <Card.Content>
-              <Card.Header>
+          <div className="ui card">
+            <div className="image">
+              <img src={avatar} alt={`${userName}'s avatar`} />
+            </div>
+            <div className="content">
+              <div className="header">
                 <a target="_blank" rel="noopener noreferrer" href={githubLink}>
                   {userName}
                 </a>
-              </Card.Header>
-              <Card.Meta>
+              </div>
+              <div className="meta">
                 <span className="date">{location}</span>
-              </Card.Meta>
-              <Card.Description>{bio}</Card.Description>
-            </Card.Content>
-            <Card.Content extra>
+              </div>
+              <div className="description">{bio}</div>
+            </div>
+            <div className="extra content">
               <p>
-                <Icon name="user" />
+                <i className="user icon" />
                 {followers} Followers
               </p>
-            </Card.Content>
-            <Card.Content extra>
+            </div>
+            <div className="extra content">
               <p>
-                <Icon name="user" />
+                <i className="user icon" />
                 {repos} Repos
               </p>
-            </Card.Content>
-            <Card.Content extra>
+            </div>
+            <div className="extra content">
               <p>
-                <Icon name="user" />
+                <i className="user icon" />
                 {following} Followings
               </p>
-            </Card.Content>
-          </Card>
+            </div>
+          </div>
         </div>
       )}
     </div>
