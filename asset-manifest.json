@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/github-search/static/css/main.273775ff.css",
-    "main.js": "/github-search/static/js/main.361a6d85.js",
+    "main.css": "/github-search/static/css/main.ba8333f0.css",
+    "main.js": "/github-search/static/js/main.fc6c1e44.js",
     "static/media/brand-icons.svg": "/github-search/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/github-search/static/media/icons.62d9dae4e0040e81c980.svg",
     "static/media/outline-icons.svg": "/github-search/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
@@ -19,11 +19,11 @@
     "static/media/outline-icons.woff": "/github-search/static/media/outline-icons.ddae9b1ba9b0b42f5880.woff",
     "static/media/outline-icons.woff2": "/github-search/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/github-search/index.html",
-    "main.273775ff.css.map": "/github-search/static/css/main.273775ff.css.map",
-    "main.361a6d85.js.map": "/github-search/static/js/main.361a6d85.js.map"
+    "main.ba8333f0.css.map": "/github-search/static/css/main.ba8333f0.css.map",
+    "main.fc6c1e44.js.map": "/github-search/static/js/main.fc6c1e44.js.map"
   },
   "entrypoints": [
-    "static/css/main.273775ff.css",
-    "static/js/main.361a6d85.js"
+    "static/css/main.ba8333f0.css",
+    "static/js/main.fc6c1e44.js"
   ]
 }
