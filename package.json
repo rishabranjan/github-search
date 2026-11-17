@@ -7,8 +7,6 @@
   },
   "homepage": "http://rishabranjan.github.io/github-search",
   "dependencies": {
-    "@apollo/client": "^3.14.1",
-    "graphql": "^16.15.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-scripts": "^5.0.1",

@@ -1,0 +1,123 @@
+.github-card {
+  --platform-accent: #1f883d;
+  --platform-ink: #1f2328;
+  --platform-muted: #59636e;
+  --platform-border: #d1d9e0;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(31 136 61 / 8%), transparent 36%),
+    #fff;
+  color: var(--platform-ink);
+}
+
+.github-search .card-search-controls button {
+  color: #fff;
+}
+
+.github-mark {
+  background: #24292f;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: -0.08em;
+}
+
+.github-identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.8rem 0 1rem;
+}
+
+.github-avatar {
+  width: 76px;
+  height: 76px;
+  flex: 0 0 auto;
+  border: 1px solid var(--platform-border);
+  border-radius: 50%;
+  background: #f6f8fa;
+}
+
+.identity-copy {
+  min-width: 0;
+}
+
+.identity-copy h3 {
+  overflow: hidden;
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  text-overflow: ellipsis;
+}
+
+.profile-handle {
+  color: var(--platform-muted);
+  text-decoration: none;
+}
+
+.profile-handle:hover {
+  color: var(--platform-accent);
+  text-decoration: underline;
+}
+
+.github-bio {
+  margin: 0 0 1rem;
+  color: #3d444d;
+  line-height: 1.55;
+}
+
+.github-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  min-height: 1.25rem;
+  margin-bottom: 1.4rem;
+  color: var(--platform-muted);
+  font-size: 0.88rem;
+}
+
+.github-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--platform-border);
+  border-radius: 10px;
+  background: rgb(246 248 250 / 75%);
+}
+
+.github-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 0.65rem;
+  text-align: center;
+}
+
+.github-stat + .github-stat {
+  border-left: 1px solid var(--platform-border);
+}
+
+.github-stat strong {
+  font-size: 1.15rem;
+}
+
+.github-stat span {
+  color: var(--platform-muted);
+  font-size: 0.75rem;
+}
+
+.github-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--platform-border);
+  border-radius: 9px;
+  color: var(--platform-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.github-action:hover {
+  border-color: #1f883d;
+  background: #f6fff8;
+  color: #116329;
+}
